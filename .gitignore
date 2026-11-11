@@ -1,0 +1,7 @@
+node_modules/
+# Build output is attached to GitHub releases, not committed
+main.js
+*.js.map
+data.json
+.DS_Store
+Thumbs.db
