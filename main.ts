@@ -7,6 +7,7 @@ import pngIcon from './icons/png.png';
 import obsidianColorIcon from './icons/obsidian-color.png';
 
 const ICON_CLASS = 'ift-icon';
+const HAS_ICON_CLASS = 'ift-has-icon';
 const ICON_EXT_ATTR = 'data-ift-ext';
 
 // ---------------------------------------------------------------------------
@@ -151,6 +152,7 @@ export default class IconFileTypePlugin extends Plugin {
     this.observer?.disconnect();
     if (this.updateTimer !== null) window.clearTimeout(this.updateTimer);
     activeDocument.querySelectorAll(`.${ICON_CLASS}`).forEach(el => el.remove());
+    activeDocument.querySelectorAll(`.${HAS_ICON_CLASS}`).forEach(el => el.classList.remove(HAS_ICON_CLASS));
   }
 
   // ── Observer ──────────────────────────────────────────────────────────────
@@ -204,6 +206,7 @@ export default class IconFileTypePlugin extends Plugin {
 
     // Remove stale icon (wrong ext or ext no longer mapped)
     existing?.remove();
+    el.classList.remove(HAS_ICON_CLASS);
 
     if (!spec) return;
 
@@ -212,5 +215,6 @@ export default class IconFileTypePlugin extends Plugin {
     span.setAttribute(ICON_EXT_ATTR, ext);
     span.appendChild(buildIcon(spec));
     el.prepend(span);
+    el.classList.add(HAS_ICON_CLASS);
   }
 }

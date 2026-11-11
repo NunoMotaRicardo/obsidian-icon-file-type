@@ -17,6 +17,6 @@
 }
 
 /* Tighten spacing when our icon is present so the row stays compact */
-.nav-file-title:has(.ift-icon) .nav-file-title-content {
+.nav-file-title.ift-has-icon .nav-file-title-content {
   padding-left: 0;
 }
