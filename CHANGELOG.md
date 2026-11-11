@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-11
+
 ### Fixed
 - Removed the `:has()` selector from the stylesheet (performance lint warning); rows with an icon now get an `ift-has-icon` class instead.
 
