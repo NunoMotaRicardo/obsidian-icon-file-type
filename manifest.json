@@ -1,7 +1,7 @@
 {
 	"id": "icon-file-type",
 	"name": "Icon File Type",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"minAppVersion": "1.0.0",
 	"description": "Show file-type icons in the file explorer for Office documents, PDFs, images, audio, video, archives and code files.",
 	"author": "NunoMotaRicardo",
